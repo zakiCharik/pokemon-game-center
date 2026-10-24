@@ -1,2 +1,3 @@
 const {contextBridge,ipcRenderer}=require('electron');
-contextBridge.exposeInMainWorld('gameCenter',{list:()=>ipcRenderer.invoke('library:list'),importGames:()=>ipcRenderer.invoke('library:import'),launch:(id)=>ipcRenderer.invoke('library:launch',id)});
+const invoke=(channel,...args)=>ipcRenderer.invoke(channel,...args);
+contextBridge.exposeInMainWorld('gameCenter',Object.freeze({list:()=>invoke('library:list'),importGames:()=>invoke('library:import'),launch:id=>invoke('library:launch',id),saves:id=>invoke('saves:list',id),backup:id=>invoke('saves:backup',id)}));
