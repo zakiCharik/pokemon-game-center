@@ -1,0 +1,4 @@
+import React from 'react';
+import type {Game} from '../electron';
+type Props={game:Game;onClose:()=>void;onExternal:()=>void};
+export function Player({game,onClose,onExternal}:Props){return <section className="player" aria-label="Lecteur de jeu"><div className="player-head"><h2>{game.title}</h2><button className="secondary" onClick={onClose}>Fermer</button></div><div className="screen"><div><div className="screen-title">Lecteur intégré en préparation</div><p>Le moteur mGBA natif doit être relié au rendu vidéo et aux entrées clavier/manette avant de pouvoir jouer ici.</p><p>Aucune ROM n'est exécutée dans cet écran.</p></div></div><div className="player-controls"><button onClick={onExternal}>Jouer avec mGBA ↗</button><span>Console : {game.platform}</span></div></section>}
