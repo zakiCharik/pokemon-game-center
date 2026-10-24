@@ -30,3 +30,9 @@ Le dossier `starter-roms/` à la racine est détecté automatiquement au démarr
 Les quatre ROMs fournies par le propriétaire du projet sont listées dans `catalog/starter-roms.json`. Pour les ajouter au dépôt, extraire l'archive `pokemon-starter-roms.zip` à la racine, puis utiliser `git add -f starter-roms/*.gba starter-roms/*.gbc` (le .gitignore exclut normalement les ROMs) et créer un commit. Ne committer que les ROMs dont la redistribution est autorisée.
 
 Le chargement automatique fonctionne en développement depuis le dossier du projet. La distribution d'une application empaquetée devra explicitement inclure ce dossier dans les ressources du paquet.
+
+## Importer des archives ZIP locales
+
+Dans **Ma bibliothèque**, clique sur **Importer des ROMs / ZIP** et sélectionne une ou plusieurs archives `.zip`, ou **Importer un dossier** pour traiter les archives d'un dossier (sans récursion). Les fichiers `.gb`, `.gbc` et `.gba` sont extraits dans le stockage privé Electron, puis enregistrés dans la bibliothèque. Les doublons sont détectés à partir du SHA-256 du contenu. Les fichiers `.nds` (Nintendo DS) et `.ips` (patchs) sont signalés comme non pris en charge ; un patch IPS doit être appliqué séparément à une ROM de base autorisée. Les ZIP peuvent contenir des fichiers annexes ignorés. Les ROMs commerciales ne sont jamais commitées dans ce dépôt.
+
+Après mise à jour : `npm install` puis `npm run dev`. L'importation ZIP n'a pas encore été validée par un test d'intégration sur macOS.
