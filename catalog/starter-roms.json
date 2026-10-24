@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "description": "ROMs fournies pour vérification; manifest sans redistribution des binaires.",
+  "games": [
+    {
+      "file": "TowerOfLife_jam.gba",
+      "platform": "GBA",
+      "sizeBytes": 773592,
+      "sha256": "55005e5299b623cd1bcb75151378d9aec58e526ff5fc7773488f44528a7bfe0b",
+      "headerValid": true
+    },
+    {
+      "file": "Feed_IT_Souls_v1.4.gbc",
+      "platform": "GBC",
+      "sizeBytes": 1048576,
+      "sha256": "2e32fc3e23b74ac67d1585d53edf2c63555722fd153df9c6c4f23c851c504655",
+      "headerValid": true
+    },
+    {
+      "file": "StarfallAdvance_jam.gba",
+      "platform": "GBA",
+      "sizeBytes": 9019160,
+      "sha256": "bdf3ec141ec5779f8b530e4855037d488643bbcdc6082522f1c7b391cf3b2edd",
+      "headerValid": true
+    },
+    {
+      "file": "pgdv260914_jam.gba",
+      "platform": "GBA",
+      "sizeBytes": 1499476,
+      "sha256": "531e467b475846f603ce6682ea7596202b27410b418e5f38e9ae59965976ef30",
+      "headerValid": true
+    }
+  ]
+}
