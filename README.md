@@ -22,3 +22,11 @@ V0.2 : interface, import multi-ROM, bibliothèque persistante JSON, lancement mG
 
 ## Licences
 Le moteur mGBA est un logiciel distinct soumis à sa propre licence. Aucun jeu Pokémon commercial n'est distribué.
+
+## Jeux homebrew de départ
+
+Le dossier `starter-roms/` à la racine est détecté automatiquement au démarrage de l'application. Les fichiers .gb/.gbc/.gba sont ajoutés à la bibliothèque, sans copie ni téléchargement. Le dossier est facultatif.
+
+Les quatre ROMs fournies par le propriétaire du projet sont listées dans `catalog/starter-roms.json`. Pour les ajouter au dépôt, extraire l'archive `pokemon-starter-roms.zip` à la racine, puis utiliser `git add -f starter-roms/*.gba starter-roms/*.gbc` (le .gitignore exclut normalement les ROMs) et créer un commit. Ne committer que les ROMs dont la redistribution est autorisée.
+
+Le chargement automatique fonctionne en développement depuis le dossier du projet. La distribution d'une application empaquetée devra explicitement inclure ce dossier dans les ressources du paquet.
